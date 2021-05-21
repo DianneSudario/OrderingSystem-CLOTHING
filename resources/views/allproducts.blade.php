@@ -73,7 +73,7 @@
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									<h1><span>GET</span>-DRESS</h1>
 									<h2>100% Responsive Design</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
@@ -264,17 +264,19 @@
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                             <div class="productinfo text-center">
+
+												{{$product->id}}
                                             <!-- {{Storage::disk('local')->url('product_image/'.$product->image)}} -->
                                                 <img src="{{Storage::disk('local')->url('product_images/'.$product->image)}}" alt="" />
                                                 <h2>{{$product -> price}}</h2>
                                                 <p>{{$product -> name}}</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                             <div class="product-overlay">
                                                 <div class="overlay-content">
                                                     <h2>{{$product -> price}}</h2>
                                                     <p>{{$product -> name}}</p>
-                                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    <a href="{{route('AddToCartProduct', ['id' => $product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                                 </div>
                                             </div>
                                     </div>

@@ -22,4 +22,10 @@ class ProductsController extends Controller
         return view("allproducts", compact("products"));
     }
 
+
+    public function addProductToCart(Request $request, $id){
+        print_r($id);
+
+    }
+
 }
